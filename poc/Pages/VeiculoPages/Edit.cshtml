@@ -1,0 +1,52 @@
+@page
+@model poc.Pages.VeiculoPages.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar dados do Veículo</h1>
+
+<h4>Veículo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Veiculo.Id" />
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Veiculo.Nome" class="control-label"></label>
+                <input asp-for="Veiculo.Nome" class="form-control" aria-required="true"/>
+                <span asp-validation-for="Veiculo.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Veiculo.Placa" class="control-label"></label>
+                <input asp-for="Veiculo.Placa" class="form-control" aria-required="true"/>
+                <span asp-validation-for="Veiculo.Placa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Veiculo.AnoFabricacao" class="control-label"></label>
+                <input asp-for="Veiculo.AnoFabricacao" class="form-control" aria-required="true"/>
+                <span asp-validation-for="Veiculo.AnoFabricacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="Veiculo.AnoModelo" class="control-label"></label>
+                <input asp-for="Veiculo.AnoModelo" class="form-control" aria-required="true"/>
+                <span asp-validation-for="Veiculo.AnoModelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <a class="btn btn-info" asp-action="Index">Voltar</a>
+                <input type="submit" value="Salvar" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

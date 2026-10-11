@@ -16,9 +16,12 @@ namespace poc.Models
         public string Placa { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Obrigatório informar o ano de fabricação.")]
-        public int AnoFabricacao { get; set; }
+        [Display(Name = "Ano de Fabricação")]
+
+        public int? AnoFabricacao { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o ano do modelo.")]
-        public int AnoModelo { get; set; }
+        [Display(Name = "Ano do Modelo")]
+        public int? AnoModelo { get; set; }
     }
 }
