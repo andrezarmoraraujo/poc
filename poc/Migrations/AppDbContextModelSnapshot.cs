@@ -56,6 +56,30 @@ namespace poc.Migrations
                     b.ToTable("Consumos");
                 });
 
+            modelBuilder.Entity("poc.Models.Usuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Perfil")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuarios");
+                });
+
             modelBuilder.Entity("poc.Models.Veiculo", b =>
                 {
                     b.Property<int>("Id")

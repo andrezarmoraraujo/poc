@@ -9,5 +9,9 @@ namespace poc.Models
         public DbSet<Veiculo> Veiculos { get; set; }
 
         public DbSet<Consumo> Consumos { get; set; }
+
+        public DbSet<Usuario> Usuarios { get; set; }
+
     }
+
 }
