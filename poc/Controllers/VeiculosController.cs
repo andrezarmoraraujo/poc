@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using poc.Models;
 using System.Linq;
@@ -6,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace poc.Controllers
 {
+    [Authorize]
+
     public class VeiculosController : Controller
     {
         private readonly AppDbContext _context;

@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <Folder Include="Views\Consumo\" />
+    <Folder Include="Views\Usuario\" />
     <Folder Include="Views\Veiculo\" />
   </ItemGroup>
 
